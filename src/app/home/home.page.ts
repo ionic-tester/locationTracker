@@ -14,7 +14,6 @@ export class HomePage {
 
   printCurrentPosition()
     {
-      //console.log(this.locationService.checkGPSPermission());
       Geolocation.getCurrentPosition().then((resp) => {
         this.latitude = resp.coords.latitude;
         this.longitude = resp.coords.longitude;
@@ -25,7 +24,6 @@ export class HomePage {
     }
     watchCurrentPosition()
   {
-    //console.log(this.locationService.checkGPSPermission());
     this.state = Geolocation.watchPosition({}, (position, err) => {
       this.ngZone.run(() => {
         this.latitude = position.coords.latitude;
