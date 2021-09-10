@@ -12,6 +12,8 @@
       <ion-card-header>Current Coordinates</ion-card-header>
       <ion-card-content>
         <ion-button (click)="printCurrentPosition()">Get Current Location</ion-button>
+        <ion-button (click)="watchCurrentPosition()">Start Location Tracking</ion-button>
+        <ion-button (click)="stopTracking()">Stop Location Tracking</ion-button>
       </ion-card-content>
       <ion-card-content>
         <ion-item>Latitude: {{ latitude }}</ion-item>
